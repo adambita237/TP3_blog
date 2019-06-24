@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block chapterList %}
+
+    <div class="news">
+        {% for post in posts %}
+            <h3>
+                {{ post.title }} <em> {{ post.creation_date|date("m/d/Y") }} </em>
+            </h3>
+            <p>{{ post.content }}
+                <br />
+            <em>
+            <a href="../src/controller/comments.php?post={{ post.id }}">Commentaires</a>
+            </em>
+            </p>
+        {% endfor %}
+     
+    </div>
+
+{% endblock %}
