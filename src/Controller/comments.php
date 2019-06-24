@@ -17,4 +17,4 @@ $twig = new \Twig\Environment($loader, [
 'cache' => false, // __DIR__ .'/var'
 ]);
 
-echo $twig->render('comment.html.twig', ['post'=>$posts, 'comments'=>$comments]);
+echo $twig->render('comment.html.twig', ['post'=>$post, 'comments'=>$comments]);
